@@ -8,12 +8,12 @@ import { PostsService } from 'src/app/services/posts.service';
 })
 export class PostsComponent implements OnInit {
 
+  posts: any;
+
   constructor(private postsService: PostsService) { }
 
-  ngOnInit(): void {
-    this.postsService.getPosts()
-    .subscribe(posts => {
-      console.log(posts);
-    });
+  ngOnInit (): void {
+
+    this.posts = this.postsService.getPosts();
   }
 }
