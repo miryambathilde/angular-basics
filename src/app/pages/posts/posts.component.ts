@@ -16,4 +16,8 @@ export class PostsComponent implements OnInit {
 
     this.posts = this.postsService.getPosts();
   }
+
+  listenClick (id: number) {
+    console.log('Click in: ', id)
+  }
 }
